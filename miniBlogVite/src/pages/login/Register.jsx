@@ -27,13 +27,9 @@ const Register = () => {
       setError('As senhas precisam ser iguais!')
       return
     }
-
-      
-
       const res =  createUser(user)
-      console.log(res)
     } 
-  }
+  
 
   useEffect(()=>{
 
@@ -86,7 +82,9 @@ const Register = () => {
           />
         </label>
 
-      <input type='submit' value='Cadastrar' className="button"/>
+      {!loading && <input type='submit' value='Cadastrar' className="button"/>}
+      {loading && <input type='submit' value='Aguarde...' disabled className="button" id="disable"/>}
+      
       
         {error && <p className='error'>{error}</p>}
      
@@ -94,7 +92,7 @@ const Register = () => {
     </form>
   </Logins>
   )
-
+  }
 
 
 export default Register

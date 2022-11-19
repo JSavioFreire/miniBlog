@@ -52,4 +52,7 @@ export const Logins = styled.section`
         border-radius: 10px;
         font-weight: 600;
     }
+    #disable{
+        background-color: gray;
+    }
 `

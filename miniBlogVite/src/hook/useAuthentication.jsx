@@ -39,7 +39,9 @@ import {
         await updateProfile(user, {
           displayName: data.displayName,
         });
-  
+
+        setLoading(false);
+        
         return user;
       } catch (error) {
   
